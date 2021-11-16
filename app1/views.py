@@ -9,4 +9,8 @@ def hello(request):
     # return redirect(home)
 
 def joker(request):
-    return render(request,"joker.html")
+    context = {'a':10,
+                'list':[10,20,30.5],
+                'str':'it is a string',
+            }
+    return render(request,"joker.html",context)
